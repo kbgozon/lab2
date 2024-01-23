@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kirk Clarenz B. Gozon's Introduction</title>
+
     <style>
         body {
-            background: url('https://images.pexels.com/photos/458497/pexels-photo-458497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ') no-repeat center center fixed;
+            background: url('https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center fixed;
             background-size: cover;
             color: white;
             display: flex;
@@ -16,76 +17,248 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            perspective: 1px;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         h1 {
-            color: yellow;
+            color: white;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
 
         .container {
             padding: 20px;
             text-align: left;
+            opacity: 0;
+            animation: fadeIn 2s forwards 0.5s;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1s;
         }
 
         th, td {
             border: 1px solid white;
-            padding: 10px;
+            padding: 15px;
+            text-align: left;
         }
 
         img {
-            max-width: 15%; /* Adjusted to make the image smaller */
+            max-width: 15%;
             display: block;
             margin: 0 auto;
             margin-top: 20px;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            transform: translateZ(-1px) scale(1.2);
+            transition: transform 0.5s ease-in-out;
+            animation: fadeIn 2s forwards 1.5s;
+        }
+
+        img:hover {
+            transform: scale(1.3);
         }
 
         .button-container {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             margin-top: 20px;
+            width: 100%;
+            opacity: 0;
+            animation: fadeIn 2s forwards 2s;
         }
 
         button {
             background-color: #3498db;
             color: white;
-            padding: 10px;
+            padding: 12px 20px;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            margin-left: 10px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        #changeContentButton {
+            animation: shake 0.5s;
+        }
+
+        .hidden-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .typewriter-text {
+            overflow: hidden;
+            border-right: 0.15em solid white;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 0.15em;
+            animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: white;
+            }
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            z-index: 1000;
+        }
+
+        .loading-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center fixed;
+            background-size: cover;
+            transform: translateZ(-1px) scale(1.5);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .additional-section {
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1.5s;
+        }
+
+        .image-gallery img {
+            max-width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards, parallax 2s forwards 1s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes parallax {
+            to {
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <div class="loading-container" id="loadingContainer">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <h1>Introduction: Kirk Clarenz B. Gozon</h1>
+
     <div class="container">
-        <h1>Introduction: Kirk Clarenz B. Gozon</h1>
         <p>Nickname: G</p>
         <p>Age: 20 | Birthdate: October 19, 2003</p>
 
         <div class="button-container">
-            <button onclick="window.location.href='https://tracker.gg/valorant/profile/riot/dizzzy%2300000/overview'">My
-                Valorant Profile</button>
+            <button onclick="window.location.href='https://tracker.gg/valorant/profile/riot/dizzzy%2300000/overview'">My Valorant Profile</button>
             <button onclick="window.location.href='https://www.instagram.com/kcg_19/?hl=en'">Instagram</button>
             <button onclick="window.location.href='https://www.facebook.com/kirkclarenz.gozon.16'">Facebook</button>
+            <button id="changeContentButton">Change Content</button>
+            <button id="musicButton">Play Music</button>
         </div>
 
-        <img src="393057788_1073090180786061_263104126871538032_n.jpg"
-            alt="Description of the image">
-        
+        <img src="C:\Users\Casper\Downloads\393057788_1073090180786061_263104126871538032_n.jpg" alt="Profile Image">
+
         <table>
             <tr>
                 <th>Educational Background</th>
-                <td>Senior High School Graduated From: Paco Catholic School</td>
-                <td>City: [City Name]</td>
-                <td>Course: BSIT</td>
+                <td colspan="3">Senior High School Graduated From: Paco Catholic School</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td colspan="3">[City Name]</td>
+            </tr>
+            <tr>
+                <th>Course</th>
+                <td colspan="3">BSIT</td>
             </tr>
             <tr>
                 <th>Scholarship Information</th>
@@ -102,34 +275,110 @@
             </tr>
             <tr>
                 <th>Experience and Interests</th>
-                <td>I.T. Experience: Programming / Gaming / Others: I have no experience. Because I am from ABM student
+                <td colspan="3">I.T. Experience: Programming / Gaming / Others: I have no experience. Because I am from ABM student
                     before.</td>
-                <td>Hobbies / Interests: Valorant, gym, badminton, music, Spotify, watching series and movies.</td>
-                <td></td>
             </tr>
         </table>
 
         <table>
             <tr>
+                <th>Hobbies / Interests</th>
+                <td colspan="3">Valorant, gym, badminton, music, Spotify, watching series and movies.</td>
+            </tr>
+            <tr>
                 <th>Expectations and Goals</th>
-                <td>What do you expect to learn from this course (Web Programming)?: I expect to learn how to create a
+                <td colspan="3">What do you expect to learn from this course (Web Programming)?: I expect to learn how to create a
                     secure website.</td>
-                <td>What do you want to learn to help you in your chosen Major?: Basic coding of the website.</td>
-                <td></td>
+            </tr>
+            <tr>
+                <th>What do you want to learn to help you in your chosen Major?</th>
+                <td colspan="3">Basic coding of the website.</td>
             </tr>
             <tr>
                 <th>Life Goals and Dreams</th>
-                <td>Goals in life: To graduate and have a well-paid job and to travel.</td>
-                <td>Dream: To have my own house, car, and to travel the world.</td>
-                <td></td>
+                <td colspan="3">Goals in life: To graduate and have a well-paid job and to travel.</td>
+            </tr>
+            <tr>
+                <th>Dream</th>
+                <td colspan="3">To have my own house, car, and to travel the world.</td>
             </tr>
             <tr>
                 <th>Additional Information</th>
-                <td>Any other interesting aspects of your life that you would like to share: For now, nothing.</td>
-                <td></td>
+                <td colspan="3">Any other interesting aspects of your life that you would like to share: For now, nothing.</td>
             </tr>
         </table>
+
+        <div class="additional-section">
+            <h2 class="typewriter-text">My Favorite Quote</h2>
+            <p class="typewriter-text">"Insert your favorite quote here."</p>
+        </div>
+
+        <div class="additional-section">
+            <h2 class="typewriter-text">Travel Bucket List</h2>
+            <ul class="typewriter-text">
+                <li>Japan</li>
+                <li>korea</li>
+                <li>japan</li>
+                <li>iceland</li>
+                <li>greenland</li>
+            </ul>
+        </div>
+
+        <div class="image-gallery">
+            <img src="https://placekitten.com/600/400" alt="Gallery Image 1">
+            <img src="https://placekitten.com/601/400" alt="Gallery Image 2">
+            <img src="https://placekitten.com/602/400" alt="Gallery Image 3">
+        </div>
+
+        <div class="hidden-content" id="hiddenContent">
+            <h2 class="typewriter-text">Warning: Your Computer Has Been Infected!</h2>
+            <p class="typewriter-text">We have detected a virus on your computer. Please follow the instructions below to remove the virus:</p>
+            <ol class="typewriter-text">
+                <li>Click on the link below to download the virus removal tool:</li>
+                <a href="https://fake-virus-removal-tool.com" target="_blank">VirusRemovalTool.exe</a>
+                <li>Run the downloaded tool to remove the virus from your system.</li>
+            </ol>
+            <p class="typewriter-text">ERORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR012312031231383914274141047147140797319731371-371031-31-31-3013131</p>
+            <img class="virus-image" src="https://placekitten.com/800/400" alt="Fake Virus Image">
+        </div>
+
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Simulating a delay for loading
+            setTimeout(function () {
+                document.getElementById("loadingContainer").style.display = "none";
+            }, 2000);
+
+            document.getElementById("changeContentButton").addEventListener("click", function () {
+                var hiddenContent = document.getElementById("hiddenContent");
+                if (hiddenContent.style.display === "none") {
+                    hiddenContent.style.display = "block";
+                    setTimeout(function () {
+                        hiddenContent.style.opacity = "1";
+                    }, 100);
+                } else {
+                    hiddenContent.style.opacity = "0";
+                    setTimeout(function () {
+                        hiddenContent.style.display = "none";
+                    }, 500);
+                }
+            });
+
+            document.getElementById("musicButton").addEventListener("click", function () {
+                var audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+                audio.play();
+            });
+        });
+
+        function shakeElement(element) {
+            element.classList.add("shake");
+            setTimeout(function () {
+                element.classList.remove("shake");
+            }, 500);
+        }
+    </script>
 
 </body>
 
