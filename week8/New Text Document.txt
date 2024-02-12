@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirk Claren B. Gozon's Introduction</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        /* Add more specific styles if needed */
+        h1 {
+            color: yellow; /* Example: Change the color of the h1 element */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Introduction: Kirk Claren B. Gozon</h1>
+        <p>Nickname: G</p>
+        <p>Age: 20 | Birthdate: October 19, 2003</p>
+        <img src="C:\Users\Casper\Downloads\393057788_1073090180786061_263104126871538032_n.jpg"
+            alt="Description of the image" style="max-width: 100%;">
+
+        <h2>Educational Background</h2>
+        <p>Senior High School Graduated From: Paco Catholic School</p>
+        <p>City: [City Name]</p>
+        <p>Course: BSIT</p>
+
+        <h2>Scholarship Information</h2>
+        <p>Scholarship: [Yes / No]</p>
+        <p>If Yes, Percentage: [Percentage]</p>
+        <p>Type: [Type]</p>
+
+        <h2>Course Choice</h2>
+        <p>Did you choose this course? [Yes / No]</p>
+        <p>If Yes, Why: I chose this course because it has more opportunities when it comes to job hiring and the salary
+            is high.</p>
+        <p>If No, What course would you choose?: Tourism</p>
+
+        <h2>Experience and Interests</h2>
+        <p>I.T. Experience: Programming / Gaming / Others: I have no experience. Because I am from ABM student
+            before.</p>
+        <p>Hobbies / Interests: Valorant, gym, badminton, music, Spotify, watching series and movies.</p>
+
+        <h2>Expectations and Goals</h2>
+        <p>What do you expect to learn from this course (Web Programming)?: I expect to learn how to create a secure
+            website.</p>
+        <p>What do you want to learn to help you in your chosen Major?: Basic coding of the website.</p>
+
+        <h2>Life Goals and Dreams</h2>
+        <p>Goals in life: To graduate and have a well-paid job and to travel.</p>
+        <p>Dream: To have my own house, car, and to travel the world.</p>
+
+        <h2>Additional Information</h2>
+        <p>Any other interesting aspects of your life that you would like to share: For now, nothing.</p>
+    </div>
+
+    <div class="container">
+        <button onclick="window.location.href='https://tracker.gg/valorant/profile/riot/dizzzy%2300000/overview'">My Valorant
+            Profile</button>
+        <button onclick="window.location.href='https://www.instagram.com/kcg_19/?hl=en'">Instagram</button>
+        <button onclick="window.location.href='https://www.facebook.com/kirkclarenz.gozon.16'">Facebook</button>
+    </div>
+
+</body>
+
+</html>
